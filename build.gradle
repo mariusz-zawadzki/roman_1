@@ -5,16 +5,21 @@ plugins {
 
 group 'pl.monku'
 version '1.0-SNAPSHOT'
-
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    testImplementation "org.spekframework.spek2:spek-dsl-jvm:$spek_version"
+    testRuntimeOnly "org.spekframework.spek2:spek-runner-junit5:$spek_version"
+    testImplementation "org.assertj:assertj-core:$assertj_version"
+    // spek requires kotlin-reflect, can be omitted if already in the classpath
+    testRuntimeOnly "org.jetbrains.kotlin:kotlin-reflect"
 }
 
 compileKotlin {

@@ -1,1 +1,3 @@
 .idea
+#download gradle-wrapper.jar by yourown
+gradle/wrapper/gradle-wrapper.jar
