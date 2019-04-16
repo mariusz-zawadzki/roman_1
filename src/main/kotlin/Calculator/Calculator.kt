@@ -1,6 +1,12 @@
 package Calculator
 
 class Calculator {
-    fun add(a: Int, b: Int): Int = a + b
+    var additions: Int = 0
+
+    fun add(a: Int, b: Int): Int {
+        additions++
+        println(this)
+        return a + b
+    }
 
 }
