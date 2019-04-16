@@ -5,17 +5,21 @@ import java.lang.IllegalStateException
 class RomanNumberConverter {
 
     val literals = listOf(
-        "M" to 1000,
         "CM" to 900,
+        "CD" to 400,
+        "XC" to 90,
+        "XL" to 40,
+        "IX" to 9,
+        "IV" to 4,
+
+        "M" to 1000,
+        "D" to 500,
         "C" to 100,
         "L" to 50,
-        "XL" to 40,
         "X" to 10,
-        "IX" to 9,
         "V" to 5,
-        "IV" to 4,
         "I" to 1
-    )
+    ).sortedBy { it.second }.reversed()
 
     fun toArabic(s: String):Int {
         var stringLeft = s;

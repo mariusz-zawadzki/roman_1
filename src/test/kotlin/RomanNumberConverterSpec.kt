@@ -50,8 +50,17 @@ object RomanNumberConverterSpec : Spek({
             it("LXXXX is 90") {
                 assertThat(romanToArabic.toArabic("LXXXX")).isEqualTo(90)
             }
-            it("MCMLXXXXIX is 1999") {
-                assertThat(romanToArabic.toArabic("MCMLXXXXIX")).isEqualTo(1999)
+            it("D is 500") {
+                assertThat(romanToArabic.toArabic("D")).isEqualTo(500)
+            }
+            it("CD is 400") {
+                assertThat(romanToArabic.toArabic("CD")).isEqualTo(400)
+            }
+            it("DC is 600") {
+                assertThat(romanToArabic.toArabic("DC")).isEqualTo(600)
+            }
+            it("MCMXCIX is 1999") {
+                assertThat(romanToArabic.toArabic("MCMXCIX")).isEqualTo(1999)
             }
             it("MMXIX is 2019") {
                 assertThat(romanToArabic.toArabic("MMXIX")).isEqualTo(2019)
