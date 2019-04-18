@@ -7,8 +7,10 @@ class RomanNumberConverter {
     val literals = listOf(
         "CM" to 900,
         "CD" to 400,
+
         "XC" to 90,
         "XL" to 40,
+
         "IX" to 9,
         "IV" to 4,
 
@@ -24,7 +26,7 @@ class RomanNumberConverter {
     fun toArabic(s: String):Int {
         var stringLeft = s;
         var sum = 0;
-        while(stringLeft.length > 0)
+        while(stringLeft.isNotEmpty())
         {
             val find = literals.find { literal ->
                 stringLeft.startsWith(literal.first)
